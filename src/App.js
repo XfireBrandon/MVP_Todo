@@ -2,9 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Loading from './components/Loading'
 import Todo from './components/Todo'
+import TodoInputBox from "./components/TodoInputBox";
+
 
 
 function App() {
+
 
   const url = 'http://localhost:3500/todo'
   
@@ -21,11 +24,22 @@ function App() {
     getTodos()
   }, [])
 
-  if(!loading) {
-    return <Todo todoProp={todo}/>
-  } else {
-    return <Loading />
-  }
+  return (
+    <>
+       <Todo todoProp={todo} />
+    <TodoInputBox />
+    </>
+ 
+  )
+
+  // if(!loading) {
+  //   return <Todo todoProp={todo}/>
+
+  // } else {
+  //   return <Loading />
+  // }
+
+  
 
 }
 

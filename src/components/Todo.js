@@ -1,9 +1,11 @@
 import TodoItems from "./TodoItems"
 
 const Todo = ({todoProp}) => {
-    return todoProp.map((todo) => (
-        <TodoItems todoItemProp={todo} key={todo.id} />
+    return todoProp.map((todos) => (
+        <TodoItems todoItemProp={todos} key={todos.id} />
+        
     ))
+    
 }
 
 export default Todo
