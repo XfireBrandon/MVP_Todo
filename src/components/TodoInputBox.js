@@ -1,4 +1,5 @@
-import { useState } from "react"
+import axios from "axios"
+import { useEffect, useState } from "react"
 
 const TodoInputBox = () => {
     const [text, setText] = useState('')
@@ -6,6 +7,9 @@ const TodoInputBox = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(text)
+        axios.post('http://localhost:3500/todo/post', {
+            todo: text
+        })
         setText('')
     }
 
