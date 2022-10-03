@@ -15,6 +15,7 @@ app.use(express.static('public'))
 app.use(express.json())
 app.use(cors())
 
+
 app.get('/todo', async (req, res) => {
     try {
         const {rows} = await pool.query('SELECT * FROM todos')
@@ -27,7 +28,7 @@ app.get('/todo', async (req, res) => {
 app.get('/todo/:id', async (req, res) => {
     const {id} = req.params
     try {
-        const {rows} = await pool.query('SELECT id FROM todos WHERE id = $1', [id])
+        const {rows} = await pool.query('SELECT * FROM todos WHERE id = $1', [id])
         res.send(rows)
     } catch (error) {
         res.send(error.message)
@@ -54,7 +55,7 @@ app.patch('/todo/patch/:id', async (req, res) => {
     }
 })
 
-app.delete('todo/:id', async (req, res) => {
+app.delete('/todo/:id', async (req, res) => {
     const {id} = req.params
     try {
         const {rows} = await pool.query('DELETE FROM todos WHERE id = $1', [id])

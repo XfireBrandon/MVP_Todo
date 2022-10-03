@@ -25,8 +25,9 @@ function App() {
 
   return (
     <>
+     <TodoInputBox  />
     <Todo todoProp={todo} />
-    <TodoInputBox  />
+   
     </>
  
   )

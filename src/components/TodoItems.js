@@ -12,8 +12,17 @@ const TodoItems = ({todoItemProp}) => {
           }
     }
 
+    const deleteTodo = async (e) => {  
+       
+        const id = e.target.id
+       const data = await axios.delete(`http://localhost:3500/todo/${id}`)
+    }
+
     return(
+        <>
         <h1 onClick={handleClick} id={todoItemProp.id}>{todoItemProp.todo}</h1>
+        <button onClick={deleteTodo} id={todoItemProp.id}>DELETE</button>
+        </>
     )
 }
 
