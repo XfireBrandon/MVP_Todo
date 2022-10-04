@@ -1,4 +1,5 @@
 import axios from "axios"
+import PatchInputBox from "./PatchInputBox"
 
 const TodoItems = ({todoItemProp}) => {
 
@@ -22,6 +23,7 @@ const TodoItems = ({todoItemProp}) => {
         <>
         <h1 onClick={handleClick} id={todoItemProp.id}>{todoItemProp.todo}</h1>
         <button onClick={deleteTodo} id={todoItemProp.id}>DELETE</button>
+        <PatchInputBox patchProp={todoItemProp.id}/>
         </>
     )
 }
