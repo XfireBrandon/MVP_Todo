@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    --SkyBlue: #5adbff;
+    --black: rgb(0, 0, 0);
+    --green: #069a06;
+    --red: #d64933;
+}
+
+body {
+    background-color: var(--black);
+}
+
+.topbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--SkyBlue);
+    font-size: 3rem;
+    font-family: 'Nekophilia', sans-serif;
+}
+
+button {
+
+background-color: var(--green);
+color: var(--black  );
+font-family: 'Futura Primer', sans-serif;
+}
+
+.Todos {
+    display: flex;
+    justify-content: space-around;
+    color: var(--SkyBlue);
+    font-size: 3rem;
+    font-family: 'Masiku', sans-serif;
+    
+}
+
+.EnterTodo {
+    width: 50%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Masiku', sans-serif;
+    font-size: 2rem;
+    color: var(--black);
+    display: flex;
+    justify-content:center;
+    margin-left: 15rem;
+  }
+
+button2 {
+    color: var(--red);
+}
+
+.UpdateTodo {
+    width: 30%;
+    font-family: 'Masiku', sans-serif;
+    padding: 10px 20px;
+
+}

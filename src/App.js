@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import TopBar from "./components/TopBar";
 import Todo from './components/Todo'
 import TodoInputBox from "./components/TodoInputBox";
 
@@ -25,20 +25,13 @@ function App() {
 
   return (
     <>
+    <TopBar />
      <TodoInputBox  />
     <Todo todoProp={todo} />
    
     </>
  
   )
-
-  // if(!loading) {
-  //   return <Todo todoProp={todo}/>
-
-  // } else {
-  //   return <Loading />
-  // }
-
   
 
 }

@@ -20,11 +20,11 @@ const TodoItems = ({todoItemProp}) => {
     }
 
     return(
-        <>
-        <h1 onClick={handleClick} id={todoItemProp.id}>{todoItemProp.todo}</h1>
-        <button onClick={deleteTodo} id={todoItemProp.id}>DELETE</button>
+        <div className="Todos">
+        <li onClick={handleClick} id={todoItemProp.id}>{todoItemProp.todo}</li>
+        <button2 onClick={deleteTodo} id={todoItemProp.id}>X</button2>
         <PatchInputBox patchProp={todoItemProp.id}/>
-        </>
+        </div>
     )
 }
 

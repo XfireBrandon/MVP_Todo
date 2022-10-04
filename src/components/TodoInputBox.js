@@ -18,9 +18,9 @@ const TodoInputBox = () => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={text} onChange={handleChange} />
-            <input type="submit" />
+        <form onSubmit={handleSubmit} className='EnterTodo'>
+            <input type="text" value={text} onChange={handleChange} className='EnterTodo'/>
+            <button type="submit">Enter</button>
         </form>
     )
 

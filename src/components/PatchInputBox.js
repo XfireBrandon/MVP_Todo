@@ -19,9 +19,9 @@ const PatchInputBox = ({patchProp}) => {
         }
     
         return(
-            <form onSubmit={handleSubmit}>
-                <input type="text" value={text} onChange={handleChange} />
-                <input type="submit" />
+            <form onSubmit={handleSubmit} className="UpdateTodo">
+                <input type="text" value={text} onChange={handleChange} className="UpdateTodo"/>
+                <button type="submit">Change</button>
             </form>
         )
     
